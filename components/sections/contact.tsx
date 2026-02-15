@@ -11,14 +11,19 @@ export function Contact() {
     subject: "General Inquiry",
     message: "",
   });
+  const [customSubject, setCustomSubject] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Determine the final subject to use
+    const finalSubject =
+      formData.subject === "Other" ? customSubject : formData.subject;
+
     // Create mailto link
     const mailtoLink = `mailto:${contactInfo.email}?subject=${encodeURIComponent(
-      formData.subject,
+      finalSubject,
     )}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
     )}`;
@@ -37,6 +42,7 @@ export function Contact() {
       subject: "General Inquiry",
       message: "",
     });
+    setCustomSubject("");
   };
 
   const handleChange = (
@@ -160,6 +166,28 @@ export function Contact() {
                     <option>Other</option>
                   </select>
                 </div>
+
+                {/* Custom Subject Input - Shows when "Other" is selected */}
+                {formData.subject === "Other" && (
+                  <div className="animate-fade-in-up">
+                    <label
+                      htmlFor="customSubject"
+                      className="block text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3"
+                    >
+                      Please specify your subject
+                    </label>
+                    <input
+                      type="text"
+                      id="customSubject"
+                      name="customSubject"
+                      value={customSubject}
+                      onChange={(e) => setCustomSubject(e.target.value)}
+                      required
+                      className="w-full px-4 py-3.5 bg-background/80 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground/50"
+                      placeholder="Enter your subject..."
+                    />
+                  </div>
+                )}
 
                 {/* Message */}
                 <div>

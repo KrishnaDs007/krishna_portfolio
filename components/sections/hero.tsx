@@ -40,15 +40,15 @@ export function Hero() {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground animate-fade-in-up animation-delay-400">
-                  JS Developer | React Developer
+                  React | JavaScript | TypeScript | Micro Frontend Architecture
                 </p>
               </div>
 
               {/* Brief Intro */}
               <p className="text-lg text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up animation-delay-600">
-                Building high-performance, accessible, and user-centric
-                interfaces for global tech leaders. Specializing in scalable web
-                applications and robust design systems.
+                Building scalable, high-performance web applications with a
+                focus on performance, design systems, and clean frontend
+                architecture.
               </p>
 
               {/* CTA Buttons */}
@@ -116,7 +116,7 @@ export function Hero() {
                           Krishna Devashish
                         </h3>
                         <p className="text-sm text-primary">
-                          Senior Frontend Architect
+                          Senior Frontend Engineer
                         </p>
                       </div>
                       <div className="flex gap-1">

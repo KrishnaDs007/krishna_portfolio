@@ -15,50 +15,37 @@ export interface ExperienceItem {
 export const experiences: ExperienceItem[] = [
     {
         id: 'exp-1',
-        title: 'Senior React Dev',
-        company: 'TechFlow Solutions',
-        location: 'San Francisco, CA',
-        startDate: '2021',
+        title: 'Senior Frontend Engineer',
+        company: 'EnterpriseBot (Ebot AI IT Solutions Pvt. Ltd.)',
+        location: 'Bangalore, India',
+        startDate: '2019',
         endDate: 'Present',
         isCurrent: true,
-        description: 'Leading a team of 5 developers. Architected a scalable component library used across 3 major products. Reduced load times by 40%.',
-        skills: ['React', 'TypeScript', 'Next.js', 'Design Systems'],
+        description: 'Led micro frontend architecture using React and Webpack. Built shared UI libraries, improved performance, and delivered scalable enterprise dashboards.',
+        skills: ['React', 'TypeScript', 'Micro Frontend', 'Webpack', 'Redux', 'Design Systems'],
         achievements: [
-            'Reduced load times by 40%',
-            'Built component library used across 3 products',
-            'Led team of 5 developers'
+            'Reduced feature release cycles by ~30%',
+            'Improved Lighthouse scores from ~60 to 90+',
+            'Built shared component library reducing duplicate work by 40%',
+            'Improved load times by 25–40%',
+            'Mentored junior developers and improved team velocity'
         ]
     },
     {
         id: 'exp-2',
         title: 'Frontend Developer',
-        company: 'Creative Agency X',
-        location: 'Remote',
-        startDate: '2019',
-        endDate: '2021',
-        isCurrent: false,
-        description: 'Developed responsive web interfaces for high-profile clients. Implemented pixel-perfect designs from Figma to React components.',
-        skills: ['React', 'JavaScript', 'Figma', 'CSS/SASS'],
-        achievements: [
-            'Delivered 15+ client projects',
-            'Implemented pixel-perfect designs',
-            'Improved performance by 30%'
-        ]
-    },
-    {
-        id: 'exp-3',
-        title: 'Junior Web Developer',
-        company: 'StartUp Inc.',
-        location: 'New York, NY',
-        startDate: '2017',
+        company: 'Airtory Interactive Pvt. Ltd.',
+        location: 'Bangalore, India',
+        startDate: '2018',
         endDate: '2019',
         isCurrent: false,
-        description: 'Focused on front-end development using modern frameworks. Implemented responsive layouts and interactive components for e-commerce websites.',
-        skills: ['HTML/CSS', 'JavaScript', 'jQuery', 'Bootstrap'],
+        description: 'Upgraded Angular applications, built interactive ad experiences, and developed responsive UIs for analytics-driven advertising platforms.',
+        skills: ['Angular', 'JavaScript', 'HTML5', 'CSS3', 'Canvas', 'Responsive Design'],
         achievements: [
-            'Built 10+ e-commerce websites',
-            'Improved mobile responsiveness',
-            'Collaborated with design team'
+            'Upgraded product UI from Angular 2 to Angular 8',
+            'Increased website engagement by ~40%',
+            'Built interactive ad experiences using HTML Canvas',
+            'Delivered responsive UIs for global ad campaigns'
         ]
     }
 ];
@@ -82,39 +69,20 @@ export interface EducationItem {
 export const education: EducationItem[] = [
     {
         id: 'edu-1',
-        degree: 'M.S.',
-        field: 'Computer Science',
-        institution: 'University of Technology',
-        location: 'California, USA',
-        startDate: '2016',
+        degree: 'B.Tech',
+        field: 'Computer Science & Engineering',
+        institution: 'Gandhi Institute for Engineering and Technology',
+        location: 'Gunupur, Odisha, India',
+        startDate: '2014',
         endDate: '2018',
         isCurrent: false,
-        description: 'Specialized in Human-Computer Interaction and Advanced Web Technologies.',
+        description: 'Focused on computer science fundamentals, web technologies, and software engineering principles.',
         achievements: [
-            'GPA: 3.8/4.0',
-            'Published research on UI accessibility',
-            'Teaching Assistant for Web Development course'
+            'Completed major project in web-based systems',
+            'Active participant in technical events and coding activities'
         ],
-        gpa: '3.8/4.0',
-        courses: ['HCI', 'Advanced Algorithms', 'Web Technologies', 'UI/UX Design']
-    },
-    {
-        id: 'edu-2',
-        degree: 'B.S.',
-        field: 'Information Tech',
-        institution: 'State University',
-        location: 'Texas, USA',
-        startDate: '2012',
-        endDate: '2016',
-        isCurrent: false,
-        description: 'Graduated with Honors. Capstone project focused on mobile-first development.',
-        achievements: [
-            'Graduated with Honors',
-            'Vice President of CS Club',
-            'Won hackathon competition'
-        ],
-        gpa: '3.6/4.0',
-        courses: ['Data Structures', 'Algorithms', 'Database Systems', 'Mobile Development']
+        gpa: '',
+        courses: ['Data Structures', 'Algorithms', 'Web Technologies', 'Database Systems']
     }
 ];
 
@@ -258,10 +226,10 @@ export interface StatsItem {
 }
 
 export const stats: StatsItem[] = [
-    { label: 'Years Experience', value: '8', suffix: '+' },
-    { label: 'Projects Completed', value: '120', suffix: '+' },
-    { label: 'Happy Clients', value: '45', suffix: '+' },
-    { label: 'Awards Won', value: '10', suffix: '+' }
+    { label: 'Years Experience', value: '7', suffix: '+' },
+    { label: 'Projects Completed', value: '25', suffix: '+' },
+    // { label: 'Happy Clients', value: '45', suffix: '+' },
+    // { label: 'Awards Won', value: '10', suffix: '+' }
 ];
 
 // Detailed Skills Data
@@ -481,17 +449,17 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
     {
         platform: 'github',
-        url: 'https://github.com/krishnadevashish',
+        url: 'https://github.com/KrishnaDs007',
         icon: 'Github'
     },
     {
         platform: 'linkedin',
-        url: 'https://www.linkedin.com/in/krishna-devashish/',
+        url: 'https://www.linkedin.com/in/mrkd007',
         icon: 'Linkedin'
     },
     {
         platform: 'twitter',
-        url: 'https://twitter.com/krishnadevashish',
+        url: 'https://x.com/itskd_17',
         icon: 'Twitter'
     },
     {

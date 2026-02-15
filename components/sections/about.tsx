@@ -8,7 +8,7 @@ import { socialLinks, contactInfo } from "@/lib/constants";
 const expertiseAreas = [
   { id: "overview", label: "Overview" },
   { id: "frontend", label: "Frontend Development" },
-  { id: "architecture", label: "Architecture & Scalability" },
+  { id: "architecture", label: "Architecture & Performance" },
   { id: "design", label: "Design Systems" },
 ];
 
@@ -62,20 +62,20 @@ export function About() {
                   </div>
 
                   {/* Info Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background via-background/95 to-transparent p-6">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background via-background/95 to-transparent p-6 pb-1">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground mt-4 mb-2">
                       <MapPin className="h-4 w-4 text-primary" />
                       <span>{contactInfo.location}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    {/* <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
                       <span>Available for projects</span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
                 {/* Social Links */}
-                <div className="mt-6">
+                <div className="mt-6 relative z-1">
                   <p className="text-sm text-muted-foreground uppercase tracking-wider mb-4">
                     Connect with me
                   </p>
@@ -96,7 +96,7 @@ export function About() {
                           href={social.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-3 rounded-lg bg-card border border-border hover:border-primary hover:bg-primary/10 transition-colors"
+                          className="p-3 rounded-lg bg-card border border-border border-color-primary hover:border-primary hover:bg-primary/10 transition-colors bg-transparent"
                           aria-label={social.platform}
                         >
                           <Icon className="h-5 w-5" />
@@ -152,28 +152,24 @@ export function About() {
                       Senior Frontend Engineer & Architect
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      With over 7 years of experience in building scalable web
-                      applications, I specialize in creating high-performance,
-                      user-centric interfaces that solve real-world problems. My
-                      journey in software development has been driven by a
-                      passion for clean code, exceptional user experiences, and
-                      continuous learning.
+                      I’m a Senior Frontend Engineer with over 7 years of
+                      experience building scalable, high-performance web
+                      applications using React, TypeScript, and modern
+                      JavaScript. My focus is on creating fast, reliable, and
+                      user-friendly interfaces that work at scale across
+                      enterprise products.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      I've had the privilege of working with diverse teams
-                      across multiple industries, from startups to
-                      enterprise-level organizations. My expertise spans the
-                      entire frontend ecosystem, with a strong focus on React,
-                      Next.js, and TypeScript. I believe in writing
-                      maintainable, testable code that stands the test of time.
+                      At EnterpriseBot, I’ve led the adoption of micro frontend
+                      architecture, built shared component libraries, and
+                      improved performance scores across major dashboards. My
+                      work has helped reduce release cycles, improve load times,
+                      and standardize UI across multiple products.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      Beyond coding, I'm passionate about mentoring junior
-                      developers, contributing to open-source projects, and
-                      staying at the forefront of web technologies. I approach
-                      every project with a problem-solving mindset, always
-                      looking for innovative solutions that balance technical
-                      excellence with business objectives.
+                      I enjoy solving complex frontend problems, mentoring
+                      developers, and building systems that are easy to scale,
+                      maintain, and extend over time.
                     </p>
                   </div>
                 )}
@@ -184,30 +180,32 @@ export function About() {
                       Frontend Development Excellence
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      My frontend development philosophy centers around building
-                      applications that are not just functional, but delightful
-                      to use. I leverage modern frameworks like React and
-                      Next.js to create dynamic, responsive interfaces that
-                      provide seamless user experiences across all devices and
-                      platforms.
+                      I specialize in building responsive, high-performance user
+                      interfaces using React, TypeScript, and modern JavaScript.
+                      My experience ranges from enterprise dashboards to
+                      analytics platforms and chatbot interfaces used by global
+                      clients.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      Performance optimization is at the core of my development
-                      process. I implement best practices such as code
-                      splitting, lazy loading, and efficient state management to
-                      ensure applications load quickly and run smoothly. I'm
-                      experienced in working with various styling solutions
-                      including Tailwind CSS, CSS Modules, and
-                      styled-components.
+                      I focus on:
+                      <ul className="list-disc list-inside">
+                        <li>Building reusable, scalable components</li>
+                        <li>
+                          Managing complex state with modern React patterns and
+                          Redux
+                        </li>
+                        <li>Integrating REST APIs and real-time data</li>
+                        <li>
+                          Ensuring accessibility, responsiveness, and
+                          cross-browser compatibility
+                        </li>
+                      </ul>
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      Accessibility and SEO are never afterthoughts in my
-                      projects. I build with semantic HTML, ARIA labels, and
-                      follow WCAG guidelines to ensure applications are usable
-                      by everyone. My attention to detail extends to
-                      implementing proper meta tags, structured data, and
-                      server-side rendering for optimal search engine
-                      visibility.
+                      I’ve worked in Agile teams, collaborated closely with
+                      designers and backend engineers, and delivered
+                      production-ready interfaces that balance performance with
+                      great user experience.
                     </p>
                   </div>
                 )}
@@ -215,32 +213,44 @@ export function About() {
                 {activeArea === "architecture" && (
                   <div className="space-y-4 animate-fade-in-up">
                     <h3 className="text-2xl font-bold">
-                      Architecture & Scalability
+                      Architecture & Performance
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Designing scalable architectures is where technical
-                      expertise meets strategic thinking. I architect
-                      applications with growth in mind, implementing patterns
-                      and structures that can evolve with changing business
-                      requirements. My approach emphasizes modularity,
-                      reusability, and maintainability.
+                      I design frontend systems with scalability,
+                      maintainability, and performance in mind. One of my key
+                      contributions has been leading the adoption of micro
+                      frontend architecture, breaking large applications into
+                      modular, independently deployable units.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      I have extensive experience with state management
-                      solutions including Redux, Zustand, and React Context,
-                      choosing the right tool based on application complexity
-                      and team needs. I design component hierarchies that
-                      promote code reuse while maintaining clear separation of
-                      concerns and single responsibility principles.
+                      My work includes:
+                      <ul className="list-disc list-inside">
+                        <li>
+                          Designing micro frontend systems using React and
+                          Webpack
+                        </li>
+                        <li>
+                          Optimizing bundles with code splitting and lazy
+                          loading
+                        </li>
+                        <li>
+                          Improving Lighthouse and Web Vitals scores across
+                          enterprise dashboards
+                        </li>
+                        <li>
+                          Reducing feature release cycles through modular
+                          architecture
+                        </li>
+                        <li>
+                          Modernizing build systems and improving developer
+                          workflows
+                        </li>
+                      </ul>
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      My architectural decisions are always data-driven. I
-                      implement comprehensive monitoring and analytics to
-                      understand application performance and user behavior. This
-                      insight guides optimization efforts and helps prioritize
-                      feature development. I also have experience with
-                      microservices architecture, API design, and integrating
-                      with various backend systems.
+                      I focus on building architectures that scale with product
+                      growth while keeping performance and maintainability at
+                      the core.
                     </p>
                   </div>
                 )}
@@ -252,27 +262,36 @@ export function About() {
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       Building and maintaining design systems is one of my core
-                      strengths. I create comprehensive component libraries that
-                      ensure consistency across products while empowering teams
-                      to move faster. My design systems include well-documented
-                      components, design tokens, and clear usage guidelines.
+                      strengths. I create reusable component libraries that
+                      ensure consistency across products while enabling teams to
+                      move faster.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      I leverage tools like Storybook for component development
-                      and documentation, making it easy for designers and
-                      developers to collaborate effectively. Each component is
-                      built with flexibility in mind, supporting theming,
-                      customization, and various use cases while maintaining a
-                      consistent visual language.
+                      My design system work includes:
+                      <ul className="list-disc list-inside">
+                        <li>Developing shared React component libraries</li>
+                        <li>
+                          Implementing design tokens and standardized UI
+                          patterns
+                        </li>
+                        <li>
+                          Creating accessible, responsive, and theme-ready
+                          components
+                        </li>
+                        <li>
+                          Collaborating with designers to maintain a consistent
+                          visual language
+                        </li>
+                        <li>
+                          Using tools like Storybook for documentation and
+                          collaboration
+                        </li>
+                      </ul>
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      Accessibility is baked into every component from the
-                      start. I use Radix UI primitives and other accessible
-                      foundations to ensure keyboard navigation, screen reader
-                      support, and proper ARIA attributes. The result is a
-                      design system that not only looks great but works for
-                      everyone, reducing technical debt and accelerating product
-                      development.
+                      The goal is to build systems that reduce duplication,
+                      improve developer productivity, and deliver a consistent
+                      user experience across all products.
                     </p>
                   </div>
                 )}

@@ -24,16 +24,20 @@ export function Experience() {
 
           {/* Stats Cards - Desktop Only */}
           <div className="hidden lg:flex justify-end gap-4 mb-8">
-            <div className="px-6 py-4 rounded-xl bg-card border border-border">
-              <div className="text-2xl font-bold text-primary">
-                {stats[0].value}
-                {stats[0].suffix}
-              </div>
-              <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                {stats[0].label}
-              </div>
-            </div>
-            <div className="px-6 py-4 rounded-xl bg-card border border-border">
+            {
+              stats.map((stat, index) => (
+                <div key={index} className="px-6 py-4 rounded-xl bg-card border border-border">
+                  <div className="text-2xl font-bold text-primary">
+                    {stat.value}
+                    {stat.suffix}
+                  </div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wider">
+                    {stat.label}
+                  </div>
+                </div>
+              ))
+            }
+            {/* <div className="px-6 py-4 rounded-xl bg-card border border-border">
               <div className="text-2xl font-bold text-primary">
                 {stats[1].value}
                 {stats[1].suffix}
@@ -41,7 +45,7 @@ export function Experience() {
               <div className="text-sm text-muted-foreground uppercase tracking-wider">
                 Projects
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Two Column Layout - Desktop */}
