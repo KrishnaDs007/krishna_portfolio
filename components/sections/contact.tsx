@@ -1,8 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  MessageSquare,
+  Loader2,
+} from "lucide-react";
 import { contactInfo } from "@/lib/constants";
+import { sendEmail } from "@/app/actions/send-email";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -13,36 +21,45 @@ export function Contact() {
   });
   const [customSubject, setCustomSubject] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
 
     // Determine the final subject to use
     const finalSubject =
       formData.subject === "Other" ? customSubject : formData.subject;
 
-    // Create mailto link
-    const mailtoLink = `mailto:${contactInfo.email}?subject=${encodeURIComponent(
-      finalSubject,
-    )}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
-    )}`;
+    try {
+      const result = await sendEmail({
+        ...formData,
+        subject: finalSubject,
+      });
 
-    // Open email client
-    window.location.href = mailtoLink;
+      if (result.success) {
+        // Show success message
+        setShowSuccess(true);
+        setTimeout(() => setShowSuccess(false), 5000);
 
-    // Show success message
-    setShowSuccess(true);
-    setTimeout(() => setShowSuccess(false), 5000);
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "General Inquiry",
-      message: "",
-    });
-    setCustomSubject("");
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "General Inquiry",
+          message: "",
+        });
+        setCustomSubject("");
+      } else {
+        setError("Something went wrong. Please try again later.");
+      }
+    } catch (err) {
+      setError("Failed to send message. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -95,8 +112,14 @@ export function Contact() {
             {/* Contact Form */}
             <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-10">
               {showSuccess && (
-                <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-600 dark:text-green-400">
-                  Message sent! Your email client should open shortly.
+                <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-600 dark:text-green-400 animate-fade-in">
+                  Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+
+              {error && (
+                <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-600 dark:text-red-400 animate-fade-in">
+                  {error}
                 </div>
               )}
 
@@ -212,10 +235,20 @@ export function Contact() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white rounded-lg transition-all font-semibold text-base shadow-lg shadow-red-500/25"
+                  disabled={isSubmitting}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white rounded-lg transition-all font-semibold text-base shadow-lg shadow-red-500/25 disabled:opacity-70 disabled:cursor-not-allowed group"
                 >
-                  <Send className="h-5 w-5" />
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="h-5 w-5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      Send Message
+                    </>
+                  )}
                 </button>
               </form>
             </div>

@@ -135,7 +135,8 @@ export function Skills() {
           <div className="mt-16">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-2">
-                Favorite Tools & <span className="text-primary">Workflow</span>
+                Tools & <span className="text-primary">Workflow</span>
+                {/* Favorite Tools & <span className="text-primary">Workflow</span> */}
               </h3>
               <p className="text-muted-foreground">
                 Essential tools and technologies that power my development
