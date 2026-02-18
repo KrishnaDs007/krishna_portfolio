@@ -21,10 +21,8 @@
       "Performance optimization with code splitting"
     ],
     "images": [
-      "/images/projects/fintech-1.jpg",
-      "/images/projects/fintech-2.jpg",
-      "/images/projects/fintech-3.jpg",
-      "/images/projects/fintech-4.jpg"
+      "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?q=80&w=1200",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200"
     ],
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "liveUrl": "https://fintech-demo.example.com",
@@ -53,9 +51,8 @@
       "Cloud storage for media assets"
     ],
     "images": [
-      "/images/projects/social-1.jpg",
-      "/images/projects/social-2.jpg",
-      "/images/projects/social-3.jpg"
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200",
+      "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c20e?q=80&w=1200"
     ],
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "liveUrl": "https://apps.apple.com/app/social-scheduler",
@@ -86,11 +83,8 @@
       "SEO optimization with SSR"
     ],
     "images": [
-      "/images/projects/ecommerce-1.jpg",
-      "/images/projects/ecommerce-2.jpg",
-      "/images/projects/ecommerce-3.jpg",
-      "/images/projects/ecommerce-4.jpg",
-      "/images/projects/ecommerce-5.jpg"
+      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1200",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200"
     ],
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "liveUrl": "https://ecommerce-demo.example.com",
@@ -120,8 +114,8 @@
       "Published as npm package"
     ],
     "images": [
-      "/images/projects/design-system-1.jpg",
-      "/images/projects/design-system-2.jpg"
+      "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1200",
+      "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=1200"
     ],
     "videoUrl": null,
     "liveUrl": "https://design-system.example.com",
@@ -151,7 +145,10 @@
       "Redis caching for performance",
       "95% test coverage"
     ],
-    "images": ["/images/projects/api-1.jpg"],
+    "images": [
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1200",
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200"
+    ],
     "videoUrl": null,
     "liveUrl": null,
     "githubUrl": "https://github.com/username/task-api",
@@ -180,12 +177,8 @@
       "Social features for sharing progress"
     ],
     "images": [
-      "/images/projects/fitness-1.jpg",
-      "/images/projects/fitness-2.jpg",
-      "/images/projects/fitness-3.jpg",
-      "/images/projects/fitness-4.jpg",
-      "/images/projects/fitness-5.jpg",
-      "/images/projects/fitness-6.jpg"
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200"
     ],
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "liveUrl": "https://apps.apple.com/app/fitness-tracker",

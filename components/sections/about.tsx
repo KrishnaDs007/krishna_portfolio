@@ -186,9 +186,9 @@ export function About() {
                       analytics platforms and chatbot interfaces used by global
                       clients.
                     </p>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <div className="text-muted-foreground leading-relaxed">
                       I focus on:
-                      <ul className="list-disc list-inside">
+                      <ul className="list-disc list-inside mt-2">
                         <li>Building reusable, scalable components</li>
                         <li>
                           Managing complex state with modern React patterns and
@@ -200,7 +200,7 @@ export function About() {
                           cross-browser compatibility
                         </li>
                       </ul>
-                    </p>
+                    </div>
                     <p className="text-muted-foreground leading-relaxed">
                       I’ve worked in Agile teams, collaborated closely with
                       designers and backend engineers, and delivered
@@ -222,9 +222,9 @@ export function About() {
                       frontend architecture, breaking large applications into
                       modular, independently deployable units.
                     </p>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <div className="text-muted-foreground leading-relaxed">
                       My work includes:
-                      <ul className="list-disc list-inside">
+                      <ul className="list-disc list-inside mt-2">
                         <li>
                           Designing micro frontend systems using React and
                           Webpack
@@ -246,7 +246,7 @@ export function About() {
                           workflows
                         </li>
                       </ul>
-                    </p>
+                    </div>
                     <p className="text-muted-foreground leading-relaxed">
                       I focus on building architectures that scale with product
                       growth while keeping performance and maintainability at
@@ -266,9 +266,9 @@ export function About() {
                       ensure consistency across products while enabling teams to
                       move faster.
                     </p>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <div className="text-muted-foreground leading-relaxed">
                       My design system work includes:
-                      <ul className="list-disc list-inside">
+                      <ul className="list-disc list-inside mt-2">
                         <li>Developing shared React component libraries</li>
                         <li>
                           Implementing design tokens and standardized UI
@@ -287,7 +287,7 @@ export function About() {
                           collaboration
                         </li>
                       </ul>
-                    </p>
+                    </div>
                     <p className="text-muted-foreground leading-relaxed">
                       The goal is to build systems that reduce duplication,
                       improve developer productivity, and deliver a consistent
